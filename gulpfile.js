@@ -90,8 +90,8 @@ electron-packager ./app 'SwitchHosts!' --platform=linux  --arch=x64 --electron-v
     if (error) {
       console.error(`exec error: ${error}`)
     }
-    // if (stdout) console.log(`${stdout}`);
-    // if (stderr) console.log(`${stderr}`);
+    //if (stdout) console.log(`${stdout}`);
+    //if (stderr) console.log(`${stderr}`);
 
     done()
   })
