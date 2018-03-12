@@ -4,7 +4,7 @@
   "description": "Homepage: [https://oldj.github.io/SwitchHosts/](https://oldj.github.io/SwitchHosts/)",
   "main": "",
   "scripts": {
-    "_ln": "./scripts/ln.sh",
+    "_ln": ".\\scripts\\ln.bat",
     "test": "nyc ava",
     "start": "electron app",
     "dll": "webpack --config scripts/webpack.dll.js --progress --profile --colors",
@@ -32,7 +32,7 @@
   "dependencies": {
     "antd": "^2.13.1",
     "codemirror": "^5.29.0",
-    "electron": "^1.7.6",
+    "electron": "^1.8.2",
     "express": "^4.15.4",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
@@ -63,7 +63,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.0",
     "css-loader": "^0.28.7",
-    "electron-packager": "^9.0.1",
+    "electron-packager": "^9.1.0",
     "eslint": "^3.14.1",
     "eslint-config-standard": "^6.2.1",
     "eslint-friendly-formatter": "^2.0.7",
@@ -108,16 +108,29 @@
     "yargs": "^6.5.0"
   },
   "ava": {
-    "files": ["src/**/*.ava.js", "test/*.js", "!**/node_modules/**/*.*"],
-    "source": ["**/*.{js,jsx}", "!dist/**/*"],
+    "files": [
+      "src/**/*.ava.js",
+      "test/*.js",
+      "!**/node_modules/**/*.*"
+    ],
+    "source": [
+      "**/*.{js,jsx}",
+      "!dist/**/*"
+    ],
     "match": [],
     "concurrency": 5,
     "failFast": true,
     "tap": true,
     "powerAssert": false,
-    "require": ["babel-polyfill", "babel-register"],
+    "require": [
+      "babel-polyfill",
+      "babel-register"
+    ],
     "babel": {
-      "presets": ["latest", "stage-0"]
+      "presets": [
+        "latest",
+        "stage-0"
+      ]
     }
   }
 }
